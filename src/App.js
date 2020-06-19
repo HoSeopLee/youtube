@@ -10,7 +10,9 @@ const App = props => {
 
   //api 연결함수 호출
   const handleSubmit = async searchbar => {
-    youtube({ key: API_KEY, term: searchbar }, videos => {
+    /*node_moduls 에서 youtube-api-search에 해당하는 
+    index를 찾아서 maxResults 값을 정의해 두면 값을5개가 아닌 필요한 만큼 불러올수 있습니다.*/
+    youtube({ key: API_KEY, term: searchbar, maxResults: 20 }, videos => {
       setVideos(videos);
       setSelecteVideo(videos[0]);
     });
