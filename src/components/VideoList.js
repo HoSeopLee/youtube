@@ -6,7 +6,6 @@ const VideoList = props => {
   const { videos } = props;
   const { handleVideoSelect } = props;
   const renderedVideos = videos.map(video => {
-    console.log(video.id);
     return (
       <VideoItem
         key={video.id.videoId}
@@ -31,7 +30,6 @@ const VideoList = props => {
   }
   return <div className="ui relaxed divided list">{renderedVideos}</div>;
 };
-
 VideoList.defaultProps = {
   videos: [],
   handleVideoSelect: () => {}

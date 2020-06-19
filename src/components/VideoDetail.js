@@ -34,5 +34,4 @@ const VideoDetail = props => {
 VideoDetail.defaultProps = {
   video: null
 };
-
 export default VideoDetail;
